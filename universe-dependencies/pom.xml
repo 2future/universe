@@ -16,7 +16,7 @@
         <spring-boot.version>2.1.10.RELEASE</spring-boot.version>
         <spring-cloud.version>Greenwich.SR4</spring-cloud.version>
         <google-guava.version>28.0-jre</google-guava.version>
-        <jackson.version>2.9.9</jackson.version>
+        <jackson.version>2.11.1</jackson.version>
         <poi.version>3.9</poi.version>
         <servlet-api.version>4.0.1</servlet-api.version>
         <sftp.jsch.version>0.1.54</sftp.jsch.version>

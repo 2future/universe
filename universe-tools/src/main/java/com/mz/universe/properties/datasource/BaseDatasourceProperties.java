@@ -1,5 +1,7 @@
 package com.mz.universe.properties.datasource;
 
+import com.mz.universe.properties.datasource.type.DatasourceName;
+
 /**
  * @author mz
  * @version V1.0
@@ -16,22 +18,27 @@ public class BaseDatasourceProperties {
     private String name;
 
     /**
-     *  数据源地址
+     * 动态数据源名称
+     */
+    private DatasourceName dynamicDatasourceName;
+
+    /**
+     * 数据源地址
      */
     private String url;
 
     /**
-     *  用户名
+     * 用户名
      */
     private String username;
 
     /**
-     *  密码
+     * 密码
      */
     private String password;
 
     /**
-     *  驱动
+     * 驱动
      */
     private String driverClassName;
 
@@ -41,6 +48,14 @@ public class BaseDatasourceProperties {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public DatasourceName getDynamicDatasourceName() {
+        return dynamicDatasourceName;
+    }
+
+    public void setDynamicDatasourceName(DatasourceName dynamicDatasourceName) {
+        this.dynamicDatasourceName = dynamicDatasourceName;
     }
 
     public String getUrl() {

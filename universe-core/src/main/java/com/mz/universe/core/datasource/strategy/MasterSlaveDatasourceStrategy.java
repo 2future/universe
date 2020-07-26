@@ -34,7 +34,7 @@ public class MasterSlaveDatasourceStrategy extends DatasourceStrategy {
         MasterSlaveDatasourceProperties masterSlave = datasourceProperties.getMasterSlave();
         Assert.notNull(masterSlave,"can you configure masterSlave?");
         masterSlave.getDatasourceProperties().forEach(property -> {
-            String name = property.getName();
+            String name = property.getDynamicDatasourceName().getName();
             DataSource dataSource = new HikariDataSourceCreater(property).createDataSource();
             targetDataSources.put(name, dataSource);
         });

@@ -9,4 +9,16 @@ package com.mz.universe.core.security.entity;
  * @date 2020/7/20 7:22 下午
  */
 public class User {
+    /**
+     * 用户编号
+     */
+    private String userCode;
+
+    public String getUserCode() {
+        return userCode;
+    }
+
+    public void setUserCode(String userCode) {
+        this.userCode = userCode;
+    }
 }

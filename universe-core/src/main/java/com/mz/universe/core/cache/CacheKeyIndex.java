@@ -1,4 +1,4 @@
-package com.deppon.cache;
+package com.mz.universe.core.cache;
 
 import java.util.Objects;
 
@@ -6,7 +6,7 @@ import java.util.Objects;
  * @author mz
  * @version V1.0
  * @Title CacheKeyIndex
- * @Package com.deppon.cache
+ * @Package com.mz.universe.core.cache
  * @Description
  * @date 2020/7/7 11:00 上午
  */

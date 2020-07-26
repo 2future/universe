@@ -1,4 +1,4 @@
-package com.mz.universe.util.constant;
+package com.mz.universe.constant;
 
 /**
  * @author mz

@@ -1,4 +1,4 @@
-package com.deppon.cache;
+package com.mz.universe.core.cache;
 
 /**
  * @author chaojitiangou

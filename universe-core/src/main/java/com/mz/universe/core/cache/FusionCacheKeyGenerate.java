@@ -1,4 +1,4 @@
-package com.deppon.cache;
+package com.mz.universe.core.cache;
 
 import java.util.TreeSet;
 import java.util.stream.Collectors;
@@ -7,7 +7,7 @@ import java.util.stream.Collectors;
  * @author mz
  * @version V1.0
  * @Title FusionCacheKeyGenet
- * @Package com.deppon.cache
+ * @Package com.mz.universe.core.cache
  * @Description
  * @date 2020/7/7 10:53 上午
  */

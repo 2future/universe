@@ -1,4 +1,4 @@
-package com.mz.universe.core.pojo.po;
+package com.mz.universe.core.base.entity.po;
 
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;

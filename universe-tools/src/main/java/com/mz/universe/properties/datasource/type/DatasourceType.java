@@ -1,8 +1,11 @@
-package com.mz.universe.core.datasource.dynamic;
+package com.mz.universe.properties.datasource.type;
 
 public enum DatasourceType {
-    MASTER("master"),
-    SLAVE("slave"),
+
+    MASTER("single"),
+
+    SLAVE("masterSlave"),
+
     SHARDING("sharding");
 
     DatasourceType(String name) {

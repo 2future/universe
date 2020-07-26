@@ -1,15 +1,14 @@
-package com.deppon.cache.processor;
+package com.mz.universe.core.cache.processor;
 
 /**
  * @author mz
  * @version V1.0
  * @Title CacheProcessor
- * @Package com.common.core.cache.aop
+ * @Package com.mz.universe.core.cache.processor
  * @Description 缓存处理通用接口
  * @date 2020/7/2 7:35 下午
  */
 public interface CacheProcessor<T> {
-
 
     /**
      * 设置缓存

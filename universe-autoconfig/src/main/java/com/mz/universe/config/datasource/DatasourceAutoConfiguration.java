@@ -1,4 +1,4 @@
-package com.mz.universe.config.datasource.configuration;
+package com.mz.universe.config.datasource;
 
 
 import com.mz.universe.core.datasource.strategy.DatasourceStrategy;

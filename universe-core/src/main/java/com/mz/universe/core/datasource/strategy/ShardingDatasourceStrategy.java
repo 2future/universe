@@ -1,7 +1,7 @@
-package com.mz.universe.config.datasource.configuration.strategy;
+package com.mz.universe.core.datasource.strategy;
 
-import com.mz.universe.config.datasource.configuration.creater.ShardingJdbcDataSourceCreater;
-import com.mz.universe.config.datasource.properties.DatasourceProperties;
+import com.mz.universe.core.datasource.creater.ShardingJdbcDataSourceCreater;
+import com.mz.universe.properties.datasource.DatasourceProperties;
 import org.springframework.util.Assert;
 
 import javax.sql.DataSource;
@@ -19,13 +19,13 @@ public class ShardingDatasourceStrategy extends DatasourceStrategy {
 
     @Override
     public void setDatasourceProperty(DatasourceProperties datasourceProperties) {
-        this.datasourceProperties=datasourceProperties;
+        this.datasourceProperties = datasourceProperties;
     }
 
     @Override
     public DataSource getDatasource() throws SQLException {
-        Assert.notNull(datasourceProperties.getSharding(),"can you configure sharding?");
-        return  (new ShardingJdbcDataSourceCreater(this.datasourceProperties.getSharding())).createDataSource();
+        Assert.notNull(datasourceProperties.getSharding(), "can you configure sharding?");
+        return (new ShardingJdbcDataSourceCreater(this.datasourceProperties.getSharding())).createDataSource();
     }
 
 }

@@ -13,8 +13,11 @@
 
     <modules>
         <module>universe-dependencies</module>
+        <module>universe-core</module>
+        <module>universe-parent</module>
+        <module>universe-starters</module>
+        <module>universe-tools</module>
+        <module>universe-autoconfig</module>
     </modules>
-
-
 
 </project>

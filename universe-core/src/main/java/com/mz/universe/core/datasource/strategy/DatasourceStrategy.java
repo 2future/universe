@@ -1,6 +1,7 @@
-package com.mz.universe.config.datasource.configuration.strategy;
+package com.mz.universe.core.datasource.strategy;
 
-import com.mz.universe.config.datasource.properties.DatasourceProperties;
+
+import com.mz.universe.properties.datasource.DatasourceProperties;
 
 import javax.sql.DataSource;
 import java.sql.SQLException;

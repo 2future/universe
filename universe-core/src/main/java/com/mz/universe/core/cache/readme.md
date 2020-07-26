@@ -3,11 +3,11 @@
 ###此注解只能用于标注与service方法上
 列：
     
-        @RdsServiceCache
+        @ServiceCache
           public List<Object> queryByPage(@CacheKey String key) {
         }
         
-@RdsServiceCache 注解包含参数  expire 缓存过期时间 (毫秒) <br/>
+@ServiceCache 注解包含参数  expire 缓存过期时间 (毫秒) <br/>
  
 @CacheKey 无参数 用于标注字符串类型的入参 或者 实体类型的入参 <br/> 注：当标注实体类型的入参 要表明实体内为key的 字段 并且有且只有一个字段<br/>
 当前类型为非字符串或者为null值将忽略此key<br/> 当无此注解 缓存key默认会只使用当前类全路径名 加上方法名称<br/>  

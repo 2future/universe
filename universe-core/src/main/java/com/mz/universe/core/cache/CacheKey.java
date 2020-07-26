@@ -1,4 +1,4 @@
-package com.deppon.cache;
+package com.mz.universe.core.cache;
 
 
 import java.lang.annotation.ElementType;
@@ -10,7 +10,7 @@ import java.lang.annotation.Target;
  * @author mz
  * @version V1.0
  * @Title CacheKey
- * @Package com.deppon.cache
+ * @Package com.mz.universe.core.cache
  * @Description 服务层缓存key 注解
  * @date 2020/7/1 5:49 下午
  */

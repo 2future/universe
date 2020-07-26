@@ -1,4 +1,4 @@
-package com.mz.universe.core.pojo.vo;
+package com.mz.universe.core.base.entity.vo;
 
 /**
  * @author mz

@@ -1,7 +1,6 @@
-package com.mz.universe.config.datasource.configuration.creater;
+package com.mz.universe.core.datasource.creater;
 
-
-import com.mz.universe.config.datasource.properties.type.ShardingJdbcDatasourceProperties;
+import com.mz.universe.properties.datasource.type.ShardingJdbcDatasourceProperties;
 import org.apache.shardingsphere.core.yaml.swapper.impl.ShardingRuleConfigurationYamlSwapper;
 import org.apache.shardingsphere.shardingjdbc.api.ShardingDataSourceFactory;
 

@@ -1,16 +1,12 @@
-package com.deppon.cache.processor;
+package com.mz.universe.core.cache.processor;
 
-import com.common.core.exception.DefaultBusinessException;
 import com.fasterxml.jackson.annotation.JsonInclude;
-import com.fasterxml.jackson.core.JsonGenerator;
 import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.JsonSerializer;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fasterxml.jackson.databind.SerializerProvider;
-import org.apache.commons.lang3.StringUtils;
+import com.mz.universe.core.exception.CommonException;
+import org.apache.commons.lang.StringUtils;
 import org.springframework.data.redis.core.RedisTemplate;
 
-import java.io.IOException;
 import java.util.Optional;
 import java.util.concurrent.TimeUnit;
 
@@ -18,7 +14,7 @@ import java.util.concurrent.TimeUnit;
  * @author mz
  * @version V1.0
  * @Title CacheProcesser
- * @Package com.common.core.cache.aop
+ * @Package
  * @Description redis缓存处理器
  * @date 2020/7/2 7:24 下午
  */
@@ -67,7 +63,7 @@ public class RedisCacheProcessor<T> implements CacheProcessor<T> {
         try {
             jsonBody = objectMapper.writeValueAsString(o);
         } catch (JsonProcessingException e) {
-            throw new DefaultBusinessException("redis 序列化异常");
+            throw new CommonException("redis 序列化异常");
         }
         Optional.ofNullable(jsonBody).ifPresent(json->{
             if (maxSize==-1 || json.getBytes().length<maxSize) {
@@ -97,7 +93,7 @@ public class RedisCacheProcessor<T> implements CacheProcessor<T> {
             Object o1 = objectMapper.readValue(valueStr, clazz);
             return (T) o1;
         } catch (Exception e) {
-            throw new DefaultBusinessException("json 解析异常");
+            throw new CommonException("json 解析异常");
         }
     }
 }

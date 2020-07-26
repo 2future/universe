@@ -1,8 +1,9 @@
-package com.mz.universe.config.datasource.configuration.strategy;
+package com.mz.universe.core.datasource.strategy;
 
-import com.mz.universe.config.datasource.configuration.creater.HikariDataSourceCreater;
-import com.mz.universe.config.datasource.properties.DatasourceProperties;
-import com.mz.universe.config.datasource.properties.type.HikariDatasourceProperties;
+
+import com.mz.universe.core.datasource.creater.HikariDataSourceCreater;
+import com.mz.universe.properties.datasource.DatasourceProperties;
+import com.mz.universe.properties.datasource.type.HikariDatasourceProperties;
 import org.springframework.util.Assert;
 
 import javax.sql.DataSource;

@@ -1,8 +1,9 @@
 package com.mz.universe.properties.datasource;
 
-import com.mz.universe.config.datasource.properties.type.HikariDatasourceProperties;
-import com.mz.universe.config.datasource.properties.type.MasterSlaveDatasourceProperties;
-import com.mz.universe.config.datasource.properties.type.ShardingJdbcDatasourceProperties;
+import com.mz.universe.properties.datasource.type.DatasourceType;
+import com.mz.universe.properties.datasource.type.HikariDatasourceProperties;
+import com.mz.universe.properties.datasource.type.MasterSlaveDatasourceProperties;
+import com.mz.universe.properties.datasource.type.ShardingJdbcDatasourceProperties;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;
 

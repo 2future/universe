@@ -23,7 +23,6 @@
         <feign.version>10.2.3</feign.version>
         <okhttp3.version>3.6.0</okhttp3.version>
         <httpclient.version>4.5.9</httpclient.version>
-        <tk.mapper.version>2.1.5</tk.mapper.version>
         <pagehelp.starter.verion>1.2.10</pagehelp.starter.verion>
         <spring.session.version>2.1.8.RELEASE</spring.session.version>
         <mybatis.spring.boot.version>2.1.0</mybatis.spring.boot.version>
@@ -34,6 +33,7 @@
         <sharding-sphere.version>4.0.0</sharding-sphere.version>
         <redisson.version>3.11.4</redisson.version>
         <hikaricp.version>3.4.5</hikaricp.version>
+        <mybatis.plus.version>3.3.2</mybatis.plus.version>
     </properties>
 
     <dependencyManagement>
@@ -176,22 +176,7 @@
                 <artifactId>httpmime</artifactId>
                 <version>${httpclient.version}</version>
             </dependency>
-            <!--tk mapper-->
-            <dependency>
-                <groupId>tk.mybatis</groupId>
-                <artifactId>mapper-spring-boot-starter</artifactId>
-                <version>${tk.mapper.version}</version>
-                <exclusions>
-                    <exclusion>
-                        <groupId>org.mybatis</groupId>
-                        <artifactId>mybatis-spring</artifactId>
-                    </exclusion>
-                    <exclusion>
-                        <groupId>org.mybatis</groupId>
-                        <artifactId>mybatis</artifactId>
-                    </exclusion>
-                </exclusions>
-            </dependency>
+
             <!--分页插件-->
             <dependency>
                 <groupId>com.github.pagehelper</groupId>
@@ -260,14 +245,24 @@
                 <artifactId>sharding-jdbc-core</artifactId>
                 <version>${sharding-sphere.version}</version>
             </dependency>
+
             <dependency>
                 <groupId>com.zaxxer</groupId>
                 <artifactId>HikariCP</artifactId>
                 <version>${hikaricp.version}</version>
             </dependency>
 
+            <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>mybatis-plus-boot-starter</artifactId>
+                <version>${mybatis.plus.version}</version>
+            </dependency>
 
-
+            <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>mybatis-plus</artifactId>
+                <version>${mybatis.plus.version}</version>
+            </dependency>
 
         </dependencies>
     </dependencyManagement>

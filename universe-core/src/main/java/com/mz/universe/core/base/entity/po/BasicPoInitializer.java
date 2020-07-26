@@ -1,7 +1,7 @@
-package com.mz.universe.core.pojo.po;
+package com.mz.universe.core.base.entity.po;
 
+import com.mz.universe.constant.ApplicationConstants;
 import com.mz.universe.core.security.context.UserContext;
-import com.mz.universe.util.constant.ApplicationConstants;
 
 import java.util.Date;
 import java.util.List;

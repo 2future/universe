@@ -1,4 +1,4 @@
-package com.deppon.cache;
+package com.mz.universe.core.cache;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;

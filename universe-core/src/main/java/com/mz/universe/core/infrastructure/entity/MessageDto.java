@@ -16,6 +16,16 @@ public class MessageDto {
     private String id;
 
     /**
+     * 消息发送平台 默认 微信/邮箱/短信
+     */
+    private MessageType platform;
+
+    /**
+     * 接受者
+     */
+    private String receiver;
+
+    /**
      * 请求体
      */
     private String requestBody;
@@ -25,6 +35,10 @@ public class MessageDto {
      */
     private boolean isUseTemplate;
 
+    /**
+     * 模版名称
+     */
+    private boolean templateName;
     /**
      * 求情服务模块名称
      */
@@ -40,12 +54,29 @@ public class MessageDto {
      */
     private boolean isDelay;
 
+
     public String getId() {
         return id;
     }
 
     public void setId(String id) {
         this.id = id;
+    }
+
+    public MessageType getPlatform() {
+        return platform;
+    }
+
+    public void setPlatform(MessageType platform) {
+        this.platform = platform;
+    }
+
+    public String getReceiver() {
+        return receiver;
+    }
+
+    public void setReceiver(String receiver) {
+        this.receiver = receiver;
     }
 
     public String getRequestBody() {
@@ -62,6 +93,14 @@ public class MessageDto {
 
     public void setUseTemplate(boolean useTemplate) {
         isUseTemplate = useTemplate;
+    }
+
+    public boolean isTemplateName() {
+        return templateName;
+    }
+
+    public void setTemplateName(boolean templateName) {
+        this.templateName = templateName;
     }
 
     public String getServiceCode() {

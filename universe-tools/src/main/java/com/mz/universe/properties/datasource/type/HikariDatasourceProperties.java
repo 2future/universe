@@ -1,6 +1,7 @@
 package com.mz.universe.properties.datasource.type;
 
-import com.mz.universe.config.datasource.properties.BaseDatasourceProperties;
+
+import com.mz.universe.properties.datasource.BaseDatasourceProperties;
 
 /**
  * @author mz

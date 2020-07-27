@@ -34,7 +34,7 @@ public class DatasourceAutoConfiguration {
     private DatasourceProperties datasourceProperties;
 
     @Bean
-    public DataSource initDataSource() throws SQLException {
+    public DataSource configDataSource() throws SQLException {
         DatasourceType datasourceType = datasourceProperties.getDatasourceType();
         DatasourceStrategy datasourceStrategy = null;
         switch (datasourceType.getName()) {

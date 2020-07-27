@@ -1,0 +1,4 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+com.mz.universe.config.datasource.DatasourceAutoConfiguration,\
+com.mz.universe.config.web.http.client.HttpClientAutoConfiguration,\
+com.mz.universe.config.redis.redisson.RedissonAutoConfiguration

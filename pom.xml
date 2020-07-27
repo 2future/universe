@@ -11,6 +11,10 @@
 
     <packaging>pom</packaging>
 
+    <properties>
+        <revision>1.0-SNAPSHOT</revision>
+    </properties>
+
     <modules>
         <module>universe-dependencies</module>
         <module>universe-core</module>
@@ -19,5 +23,57 @@
         <module>universe-tools</module>
         <module>universe-autoconfig</module>
     </modules>
+
+    <build>
+        <resources>
+            <!-- 如果没有该配置，java 路径下的配置文件不会被编译-->
+            <resource>
+                <directory>${project.basedir}/src/main/java</directory>
+                <includes>
+                    <include>**/*.xml</include>
+                    <include>**/*.yml</include>
+                    <include>**/*.properties</include>
+                    <include>**/*.factories</include>
+                </includes>
+            </resource>
+            <resource>
+                <directory>${project.basedir}/src/main/resources</directory>
+                <includes>
+                    <include>**/*.xml</include>
+                    <include>**/*.yml</include>
+                    <include>**/*.ftl</include>
+                    <include>**/*.properties</include>
+                    <include>**/*.factories</include>
+                </includes>
+            </resource>
+        </resources>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-source-plugin</artifactId>
+                <version>3.0.1</version>
+                <configuration>
+                    <attach>true</attach>
+                </configuration>
+                <executions>
+                    <execution>
+                        <phase>compile</phase>
+                        <goals>
+                            <goal>jar</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.6.2</version>
+                <configuration>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 
 </project>

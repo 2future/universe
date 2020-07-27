@@ -5,7 +5,7 @@ package com.mz.universe.core.infrastructure.entity;
  * @version V1.0
  * @Title WxDto
  * @Package com.mz.universe.core.infrastructure.entity
- * @Description 微信请求实体
+ * @Description 请求实体
  * @date 2020/7/20 7:50 下午
  */
 public class MessageDto {

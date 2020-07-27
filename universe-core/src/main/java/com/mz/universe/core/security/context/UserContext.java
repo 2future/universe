@@ -1,7 +1,7 @@
 package com.mz.universe.core.security.context;
 
+import com.mz.universe.constant.ApplicationConstants;
 import com.mz.universe.core.security.entity.User;
-import com.mz.universe.util.constant.ApplicationConstants;
 
 /**
  * @author mz

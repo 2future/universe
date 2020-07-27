@@ -3,37 +3,50 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
-        <artifactId>universe-parent</artifactId>
+        <artifactId>universe-dependencies</artifactId>
         <groupId>com.mz</groupId>
         <version>1.0-SNAPSHOT</version>
+        <relativePath>../universe-dependencies</relativePath>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>universe-autoconfig</artifactId>
 
     <dependencies>
+
         <dependency>
             <groupId>com.mz</groupId>
             <artifactId>universe-core</artifactId>
             <version>1.0-SNAPSHOT</version>
             <scope>compile</scope>
         </dependency>
+
+        <dependency>
+            <groupId>com.mz</groupId>
+            <artifactId>universe-tools</artifactId>
+            <version>1.0-SNAPSHOT</version>
+            <scope>compile</scope>
+        </dependency>
+
         <!--springboot-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter</artifactId>
             <scope>compile</scope>
         </dependency>
+
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-autoconfigure</artifactId>
             <scope>compile</scope>
         </dependency>
+
         <dependency>
             <groupId>com.zaxxer</groupId>
             <artifactId>HikariCP</artifactId>
             <optional>true</optional>
         </dependency>
+
         <!--sharding jdbc-->
         <dependency>
             <groupId>org.apache.shardingsphere</groupId>
@@ -53,12 +66,14 @@
             <artifactId>spring-cloud-openfeign-core</artifactId>
             <optional>true</optional>
         </dependency>
+
+        <!--redisson-->
         <dependency>
-            <groupId>com.mz</groupId>
-            <artifactId>universe-tools</artifactId>
-            <version>1.0-SNAPSHOT</version>
-            <scope>compile</scope>
+            <groupId>org.redisson</groupId>
+            <artifactId>redisson</artifactId>
+            <optional>true</optional>
         </dependency>
+
     </dependencies>
 
 </project>

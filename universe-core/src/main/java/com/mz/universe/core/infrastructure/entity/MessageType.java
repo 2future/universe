@@ -3,7 +3,6 @@ package com.mz.universe.core.infrastructure.entity;
 /**
  * @author chaojitiangou
  */
-
 public enum MessageType {
     /**
      * 微信
@@ -16,5 +15,9 @@ public enum MessageType {
     /**
      * 邮箱
      */
-    E_MAIL;
+    E_MAIL,
+    /**
+     * web-socket
+     */
+    WEB_SOCKET;
 }

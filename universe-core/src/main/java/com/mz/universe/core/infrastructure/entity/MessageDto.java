@@ -16,7 +16,7 @@ public class MessageDto {
     private String id;
 
     /**
-     * 消息发送平台 默认 微信/邮箱/短信
+     * 消息发送平台 默认 微信/邮箱/短信/websocket
      */
     private MessageType platform;
 
@@ -39,6 +39,7 @@ public class MessageDto {
      * 模版名称
      */
     private boolean templateName;
+
     /**
      * 求情服务模块名称
      */

@@ -13,14 +13,15 @@
 
     <properties>
         <spring.version>5.1.11.RELEASE</spring.version>
-        <spring-boot.version>2.1.10.RELEASE</spring-boot.version>
-        <spring-cloud.version>Greenwich.SR4</spring-cloud.version>
+        <spring-boot.version>2.3.2.RELEASE</spring-boot.version>
+        <spring-cloud.version>Hoxton.SR5</spring-cloud.version>
         <google-guava.version>28.0-jre</google-guava.version>
         <jackson.version>2.11.1</jackson.version>
         <poi.version>3.9</poi.version>
         <servlet-api.version>4.0.1</servlet-api.version>
         <sftp.jsch.version>0.1.54</sftp.jsch.version>
-        <feign.version>10.2.3</feign.version>
+        <feign.version>2.2.3.RELEASE</feign.version>
+        <ribbon.version>2.3.0</ribbon.version>
         <okhttp3.version>3.6.0</okhttp3.version>
         <httpclient.version>4.5.9</httpclient.version>
         <pagehelp.starter.verion>1.2.10</pagehelp.starter.verion>
@@ -52,11 +53,6 @@
             <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-starter-data-redis</artifactId>
-                <version>${spring-boot.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-starter-data-elasticsearch</artifactId>
                 <version>${spring-boot.version}</version>
             </dependency>
             <dependency>
@@ -106,17 +102,32 @@
                 <artifactId>spring-session-data-redis</artifactId>
                 <version>${spring.session.version}</version>
             </dependency>
-
-            <!--spring-cloud-->
+            <!--使用open-feign-->
             <dependency>
                 <groupId>org.springframework.cloud</groupId>
-                <artifactId>spring-cloud-dependencies</artifactId>
-                <version>${spring-cloud.version}</version>
-                <type>pom</type>
-                <scope>import</scope>
+                <artifactId>spring-cloud-openfeign-core</artifactId>
+                <version>${feign.version}</version>
+                <exclusions>
+                    <exclusion>
+                        <groupId>org.springframework.cloud</groupId>
+                        <artifactId>spring-cloud-netflix-ribbon</artifactId>
+                    </exclusion>
+                </exclusions>
             </dependency>
 
-            <!--3rd part-->
+            <!--ribbon-->
+            <dependency>
+                <groupId>com.netflix.ribbon</groupId>
+                <artifactId>ribbon-core</artifactId>
+                <version>${ribbon.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.netflix.ribbon</groupId>
+                <artifactId>ribbon-loadbalancer</artifactId>
+                <version>${ribbon.version}</version>
+            </dependency>
+
             <dependency>
                 <groupId>com.google.guava</groupId>
                 <artifactId>guava</artifactId>
@@ -147,12 +158,6 @@
                 <groupId>com.jcraft</groupId>
                 <artifactId>jsch</artifactId>
                 <version>${sftp.jsch.version}</version>
-            </dependency>
-            <!--feign-->
-            <dependency>
-                <groupId>io.github.openfeign</groupId>
-                <artifactId>feign-okhttp</artifactId>
-                <version>${feign.version}</version>
             </dependency>
             <!--okhttp-->
             <dependency>

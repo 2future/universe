@@ -20,6 +20,8 @@ public class ShardingJdbcDataSourceCreater {
     private ShardingJdbcDatasourceProperties shardingJdbcDatasourceProperties;
 
     public ShardingJdbcDataSourceCreater(ShardingJdbcDatasourceProperties shardingJdbcDatasourceProperties) {
+
+
         this.shardingJdbcDatasourceProperties = shardingJdbcDatasourceProperties;
     }
 

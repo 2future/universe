@@ -24,7 +24,7 @@ import javax.sql.DataSource;
 public class ShardingAlgorithmAutoConfiguration {
 
     @Bean
-    @ConditionalOnProperty(prefix = "vos.datasource.sharding", name = "enabled")
+    @ConditionalOnProperty(prefix = "universe.datasource.sharding.algorithmParam", name = "tableShardingCount")
     public ShardingAlgorithmParamInit initTableParam(DatasourceProperties datasourceProperties) throws Exception {
         ShardingAlgorithmParamInit init =new ShardingAlgorithmParamInit();
         init.initTableCountParam(datasourceProperties.getSharding().getAlgorithmParam());
@@ -32,7 +32,7 @@ public class ShardingAlgorithmAutoConfiguration {
     }
 
     @Bean
-    @ConditionalOnProperty(prefix = "vos.datasource.sharding", name = "enabled")
+    @ConditionalOnProperty(prefix = "universe.datasource.sharding.algorithmParam", name = "databaseShardingCount")
     public ShardingAlgorithmParamInit initDatasourceParam(DatasourceProperties datasourceProperties) throws Exception {
         ShardingAlgorithmParamInit init =new ShardingAlgorithmParamInit();
         init.initDatasourceCountParam(datasourceProperties.getSharding().getAlgorithmParam());

@@ -1,5 +1,6 @@
 package com.mz.universe.properties.datasource.type;
 
+import com.mz.universe.properties.datasource.ShardingAlgorithmParamProperties;
 import org.apache.shardingsphere.core.yaml.config.sharding.YamlRootShardingConfiguration;
 
 import java.util.List;
@@ -12,8 +13,12 @@ import java.util.List;
  * @Description shardingjdbc数据源属性
  * @date 2020/7/24 4:04 下午
  */
-public class ShardingJdbcDatasourceProperties  {
+public class ShardingJdbcDatasourceProperties {
 
+    /**
+     * 分表分库算法参数配置
+     */
+    private ShardingAlgorithmParamProperties algorithmParam;
     /**
      * 默认数据源名称
      */
@@ -28,6 +33,14 @@ public class ShardingJdbcDatasourceProperties  {
      */
     private YamlRootShardingConfiguration config;
 
+
+    public ShardingAlgorithmParamProperties getAlgorithmParam() {
+        return algorithmParam;
+    }
+
+    public void setAlgorithmParam(ShardingAlgorithmParamProperties algorithmParam) {
+        this.algorithmParam = algorithmParam;
+    }
 
     public String getDefaultDatasourceName() {
         return defaultDatasourceName;

@@ -1,4 +1,4 @@
-package com.mz.universe.core.exception;
+package com.mz.universe.exception;
 
 public enum ExceptionType {
     /**

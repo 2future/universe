@@ -3,7 +3,7 @@ package com.mz.universe.core.cache.processor;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.mz.universe.core.exception.CommonException;
+import com.mz.universe.exception.CommonException;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.data.redis.core.RedisTemplate;
 

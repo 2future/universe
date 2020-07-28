@@ -5,7 +5,7 @@
     <parent>
         <artifactId>universe-dependencies</artifactId>
         <groupId>com.mz</groupId>
-        <version>1.0-SNAPSHOT</version>
+        <version>Pangu.All</version>
         <relativePath>../universe-dependencies</relativePath>
     </parent>
     <modelVersion>4.0.0</modelVersion>

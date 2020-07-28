@@ -33,6 +33,7 @@ public class HttpClientAutoConfiguration {
      */
     @Bean
     @Scope(ConfigurableBeanFactory.SCOPE_PROTOTYPE)
+    @Primary
     @ConditionalOnClass(name = "okhttp3.OkHttpClient")
     public RestTemplate configProtoRestTemplate(){
         RestTemplateCreater creater=new RestTemplateCreater(httpClientProperties);
@@ -40,7 +41,6 @@ public class HttpClientAutoConfiguration {
     }
 
     @Bean("okHttpRestClient")
-    @Primary
     @ConditionalOnClass(name = "okhttp3.OkHttpClient")
     public RestTemplate configOkHttpRestTemplate(){
        RestTemplateCreater creater=new RestTemplateCreater(httpClientProperties);

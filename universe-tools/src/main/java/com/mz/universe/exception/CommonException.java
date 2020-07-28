@@ -1,6 +1,5 @@
-package com.mz.universe.core.exception;
+package com.mz.universe.exception;
 
-import org.apache.commons.lang3.ObjectUtils;
 import org.apache.commons.lang3.StringUtils;
 
 /**

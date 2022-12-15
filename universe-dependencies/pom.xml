@@ -14,7 +14,7 @@
     <packaging>pom</packaging>
 
     <properties>
-        <spring.version>5.2.8.RELEASE</spring.version>
+        <spring.version>5.2.20.RELEASE</spring.version>
         <spring-boot.version>2.3.2.RELEASE</spring-boot.version>
         <google-guava.version>28.0-jre</google-guava.version>
         <jackson.version>2.11.1</jackson.version>
